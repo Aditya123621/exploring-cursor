@@ -1,0 +1,38 @@
+---
+description: Backend development patterns and database operations
+globs: ["backend/**/*.js"]
+alwaysApply: false
+---
+
+# Backend Development Patterns
+
+## Controller Pattern
+- Use static class methods with JSDoc comments
+- Always include try-catch blocks
+- Validate input data before processing
+- Use consistent error responses
+
+## Model Methods Standard
+- `findAll()`: Get all records
+- `findById(id)`: Get single record by ID  
+- `findByEmail(email)`: Get record by email
+- `create(data)`: Create new record
+- `update(id, data)`: Update existing record
+- `delete(id)`: Delete record
+- `validate(data)`: Validate input data
+
+## Database Operations
+- Use the configured Supabase client from `config/database.js`
+- Always handle database errors properly
+- Return new Model instances from database operations
+- Include proper error messages for database failures
+
+## Validation Rules
+- Validate all user inputs
+- Sanitize data before database operations  
+- Trim whitespace from string inputs
+- Convert emails to lowercase
+- Use proper email validation regex
+
+@backend/models/User.js
+@backend/config/database.js

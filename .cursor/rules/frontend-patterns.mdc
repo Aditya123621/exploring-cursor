@@ -1,0 +1,40 @@
+---
+description: Frontend development patterns for Next.js and React
+globs: ["frontend/**/*.tsx", "frontend/**/*.ts"]
+alwaysApply: false
+---
+
+# Frontend Development Patterns
+
+## Next.js Standards
+- Use app directory structure
+- Implement TypeScript strictly
+- Use server and client components appropriately
+- Follow Next.js 13+ conventions
+
+## React Component Rules
+- Use functional components with TypeScript
+- Define interfaces for component props
+- Use meaningful component and prop names
+- Export components as default exports
+
+## Styling Standards
+- Use Tailwind CSS for all styling
+- Prefer utility classes over custom CSS
+- Use consistent spacing and color schemes
+- Make components responsive by default
+
+## TypeScript Requirements
+- Define interfaces for all props
+- Use proper typing for API responses
+- Avoid `any` type - use specific types
+- Export types that are reused
+
+## API Integration
+- Backend runs on port 3001
+- Use proper error handling for API calls
+- Implement loading states for async operations
+- Use consistent data fetching patterns
+
+@frontend/src/app/layout.tsx
+@frontend/src/app/page.tsx

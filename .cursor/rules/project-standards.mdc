@@ -1,0 +1,52 @@
+---
+description: Project coding standards and architecture guidelines
+globs: ["**/*.js", "**/*.ts", "**/*.tsx", "**/*.json"]
+alwaysApply: true
+---
+
+# Project Standards for Node.js + Express + Supabase + Next.js
+
+## Architecture Rules
+- Backend: Node.js + Express + Supabase (ES Modules)
+- Frontend: Next.js + React + TypeScript + Tailwind CSS
+- Database: Supabase (PostgreSQL)
+- Pattern: MVC with organized folder structure
+
+## ES Modules Standards
+- ALWAYS use `import/export` syntax (NOT `require/module.exports`)
+- Include `.js` extensions in relative imports
+- Example: `import User from '../models/User.js'`
+
+## Response Format Standard
+```javascript
+// Success Response
+{
+  "success": true,
+  "message": "Description of what happened",
+  "data": { /* actual data */ }
+}
+
+// Error Response  
+{
+  "success": false,
+  "error": {
+    "message": "Error description",
+    "details": "Additional details"
+  }
+}
+```
+
+## Error Message Style
+- Add appropriate humor to user-facing messages
+- Keep professional but friendly
+- Examples:
+  - "Validation failed - looks like your data needs some validation therapy! 😅"
+  - "Failed to retrieve system status - our system is feeling a bit shy today! 🙈"
+
+## HTTP Status Codes
+- 200: Success (GET, PUT, DELETE)
+- 201: Created (POST)  
+- 400: Bad Request (validation errors)
+- 404: Not Found
+- 409: Conflict (duplicate data)
+- 500: Internal Server Error
